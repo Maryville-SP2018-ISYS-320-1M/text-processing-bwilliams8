@@ -4,6 +4,7 @@
 	Date: 
 */
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class P5_AvgToTwoPlaces {
@@ -23,8 +24,10 @@ public class P5_AvgToTwoPlaces {
 			
 			sum += nextInputValue;
 		}
-		
-		System.out.println("The average value is: " + sum / numbers);
+		double combinedNumber = sum / numbers;
+		DecimalFormat df = new DecimalFormat("#.##");
+		System.out.println("The average value is: " + df.format(combinedNumber));
+		input.close();
 	}
 
 }
